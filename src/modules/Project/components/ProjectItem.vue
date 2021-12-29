@@ -225,7 +225,7 @@ export default defineComponent({
       color: $--color-primary;
     }
     &:hover {
-      color: #6b9eff;
+      color: $--color-primary;
     }
   }
 }
