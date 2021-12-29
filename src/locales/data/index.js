@@ -1,1 +1,1 @@
-export const systemTitle = 'Vite Starter'
+export const systemTitle = 'Pinia Starter'
