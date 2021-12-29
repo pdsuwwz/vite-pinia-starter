@@ -55,7 +55,6 @@
 
 <script>
 import { defineComponent, getCurrentInstance, ref } from 'vue'
-import { useStore } from 'vuex'
 
 export default defineComponent({
   name: 'ProjectForm',
@@ -69,7 +68,6 @@ export default defineComponent({
   },
   setup (props) {
     const { proxy } = getCurrentInstance()
-    const store = useStore()
 
     const refForm = ref(null)
 

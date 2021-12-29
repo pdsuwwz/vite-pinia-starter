@@ -42,7 +42,6 @@
 </template>
 
 <script>
-import { useStore } from 'vuex'
 import {
   computed,
   defineComponent,
@@ -102,10 +101,6 @@ export default defineComponent({
 
           context.fullLoading = true
           const { error, data } = await projectStore.createProject(formData)
-          // const { error, data } = await store.dispatch(
-          //   ProjectModule.getAction('createProject'),
-          //   formData
-          // )
 
           context.fullLoading = false
 

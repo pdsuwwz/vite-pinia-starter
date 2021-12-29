@@ -53,8 +53,7 @@
     "nprogress": "^0.2.0",
     "pinia": "^2.0.9",
     "vue": "^3.2.26",
-    "vue-router": "^4.0.12",
-    "vuex": "^4.0.2"
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@babel/core": "^7.16.5",

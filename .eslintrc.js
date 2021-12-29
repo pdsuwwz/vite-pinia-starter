@@ -46,7 +46,7 @@ module.exports = {
 
     // js
     'no-unused-vars': 1,
-    'no-undef': 1,
+    'no-undef': 2,
     // https://eslint.org/docs/rules/no-var
     'no-var': 'error',
     // https://cn.eslint.org/docs/rules/no-trailing-spaces

@@ -33,7 +33,6 @@ import { defineComponent } from 'vue'
 import NavigationSideGoBack from '@/components/Navigation/Side/SideGoBack.vue'
 import NavigationNavBar from '@/components/Navigation/NavBar.vue'
 import { useRouter } from 'vue-router'
-import { useStore } from 'vuex'
 
 export default defineComponent({
   name: 'LayoutView',
@@ -43,7 +42,6 @@ export default defineComponent({
   },
   setup () {
     const router = useRouter()
-    const store = useStore()
 
     return {
     }

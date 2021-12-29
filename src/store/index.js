@@ -1,25 +1,14 @@
-import { createStore } from 'vuex'
+import { createPinia } from 'pinia'
+import { pluginPinia } from '@/store/plugins'
 
-/**
- * plugins mount
- */
-// import plugins from '@/store/plugins'
-import plugins from '@/store/plugins'
+const store = createPinia()
 
-/**
- * modules mount
- */
-import UserAccount from '@/modules/UserAccount/store'
-// import Project from '@/modules/Project/store'
-import ResultModule from '@/modules/Result/store'
+export function setupStore (app) {
+  app.use(store)
+}
 
-const store = createStore({
-  modules: {
-    UserAccount: UserAccount,
-    // Project: Project,
-    Result: ResultModule
-  },
-  plugins
-})
+store.use(pluginPinia)
 
-export default store
+export {
+  store
+}

@@ -7,20 +7,22 @@ export function login (data) {
   //   data
   // })
 
-  return {
-    error: 0,
-    msg: 'OK',
-    data: {
-      language: 'en',
-      user: {
-        email: 'admin@org.com',
-        phone: '15290788137',
-        username: '管理员',
-        id: '601d85900f43923hffbcs',
-        token: '4v8acea-6a89-2a2ebc-10802-9ac19003'
+  return new Promise((resolve) => {
+    resolve({
+      error: 0,
+      msg: 'OK',
+      data: {
+        language: 'en',
+        user: {
+          email: 'admin@org.com',
+          phone: '15290788137',
+          username: '管理员',
+          id: '601d85900f43923hffbcs',
+          token: '4v8acea-6a89-2a2ebc-10802-9ac19003'
+        }
       }
-    }
-  }
+    })
+  })
 }
 export function logout (data) {
   return request({
@@ -36,20 +38,22 @@ export function getUserInfoData (params) {
   //   method: 'get',
   //   params
   // })
-  return {
-    error: 0,
-    msg: 'OK',
-    data: {
-      language: 'en',
-      user: {
-        email: 'admin@org.com',
-        phone: '15290788137',
-        username: '管理员',
-        id: '601d85900f43923hffbcs',
-        token: '4v8acea-6a89-2a2ebc-10802-9ac19003'
+  return new Promise((resolve) => {
+    resolve({
+      error: 0,
+      msg: 'OK',
+      data: {
+        language: 'en',
+        user: {
+          email: 'admin@org.com',
+          phone: '15290788137',
+          username: '管理员',
+          id: '601d85900f43923hffbcs',
+          token: '4v8acea-6a89-2a2ebc-10802-9ac19003'
+        }
       }
-    }
-  }
+    })
+  })
 }
 
 // 切换后端语言

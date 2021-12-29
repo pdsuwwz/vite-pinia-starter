@@ -16,12 +16,3 @@ export function filterResponse (res, successCb = null, errorCb = null) {
     resolve(res)
   })
 }
-
-export default {
-  getAction (name) {
-    return `${this._name}/${Object.keys(this.actions)[Object.keys(this.actions).indexOf(name)]}`
-  },
-  getMutation (name) {
-    return `${this._name}/${Object.keys(this.mutations)[Object.keys(this.mutations).indexOf(name)]}`
-  }
-}

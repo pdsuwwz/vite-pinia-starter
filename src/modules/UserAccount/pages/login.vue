@@ -50,12 +50,11 @@ import { Promotion } from '@element-plus/icons-vue'
 
 import UserAccountContainerLayout from '@/modules/UserAccount/components/ContainerLayout.vue'
 
-import UserAccountModule from '@/modules/UserAccount/store'
 import Translations from '@/locales/Translations.vue'
 
 import Cookie from 'js-cookie'
-import { useStore } from 'vuex'
 import { useRoute, useRouter } from 'vue-router'
+import { useUserAccountStore } from '@/modules/UserAccount/store'
 
 export default defineComponent({
   name: 'UserAccountLogin',
@@ -66,7 +65,7 @@ export default defineComponent({
   },
   setup () {
     const { proxy } = getCurrentInstance()
-    const store = useStore()
+    const userAccountStore = useUserAccountStore()
     const route = useRoute()
     const router = useRouter()
 
@@ -158,7 +157,7 @@ export default defineComponent({
         inputErrorPassword.value = ''
 
         setLoading(true)
-        const { error, data, msg } = await store.dispatch(UserAccountModule.getAction('login'), formData)
+        const { error, data, msg } = await userAccountStore.login(formData)
         if (error) {
           inputErrorEmail.value = ' '
           inputErrorPassword.value = msg

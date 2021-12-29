@@ -10,7 +10,7 @@
 import { ElConfigProvider } from 'element-plus'
 import { useRoute, useRouter } from 'vue-router'
 import { computed, watch } from 'vue'
-import { useStore } from 'vuex'
+import { useUserAccountStore } from '@/modules/UserAccount/store'
 
 import zhCn from 'element-plus/lib/locale/lang/zh-cn'
 import en from 'element-plus/lib/locale/lang/en'
@@ -22,7 +22,7 @@ const useLanguage = (store, route) => {
   const currentLocale = computed(() => {
     let locale = null
 
-    switch (store.state.UserAccount.locale) {
+    switch (store.locale) {
       case 'zh-hans':
         locale = {
           ...zhCn,
@@ -50,7 +50,7 @@ export default {
     ElConfigProvider
   },
   setup () {
-    const store = useStore()
+    const store = useUserAccountStore()
     const route = useRoute()
     const router = useRouter()
 
@@ -59,7 +59,7 @@ export default {
       () => {
         if (route.name === '404') return
 
-        store.dispatch('UserAccount/setLanguage', {
+        store.setLanguage({
           locale: route.params.locale || 'en'
         })
       }

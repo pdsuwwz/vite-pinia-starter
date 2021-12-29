@@ -60,7 +60,6 @@
 <script>
 import { defineComponent, nextTick, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { useStore } from 'vuex'
 
 export default defineComponent({
   name: 'DialogModal',
@@ -88,7 +87,6 @@ export default defineComponent({
     'update:modelValue'
   ],
   setup (props, { emit }) {
-    const store = useStore()
     const route = useRoute()
     const router = useRouter()
 

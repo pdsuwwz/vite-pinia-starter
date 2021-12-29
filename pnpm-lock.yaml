@@ -39,7 +39,6 @@ specifiers:
   vite: ^2.7.7
   vue: ^3.2.26
   vue-router: ^4.0.12
-  vuex: ^4.0.2
 
 dependencies:
   '@element-plus/icons-vue': 0.2.4_vue@3.2.26
@@ -57,7 +56,6 @@ dependencies:
   pinia: 2.0.9_vue@3.2.26
   vue: 3.2.26
   vue-router: 4.0.12_vue@3.2.26
-  vuex: 4.0.2_vue@3.2.26
 
 devDependencies:
   '@babel/core': 7.16.5
@@ -5177,15 +5175,6 @@ packages:
       '@vue/runtime-dom': 3.2.26
       '@vue/server-renderer': 3.2.26_vue@3.2.26
       '@vue/shared': 3.2.26
-    dev: false
-
-  /vuex/4.0.2_vue@3.2.26:
-    resolution: {integrity: sha512-M6r8uxELjZIK8kTKDGgZTYX/ahzblnzC4isU1tpmEuOIIKmV+TRdc+H4s8ds2NuZ7wpUTdGRzJRtoj+lI+pc0Q==}
-    peerDependencies:
-      vue: ^3.0.2
-    dependencies:
-      '@vue/devtools-api': 6.0.0-beta.21.1
-      vue: 3.2.26
     dev: false
 
   /w3c-hr-time/1.0.2:

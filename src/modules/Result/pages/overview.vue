@@ -12,24 +12,20 @@
 <script>
 import { computed, defineComponent } from 'vue'
 
-import ResultStore from '@/modules/Result/store'
-import { useStore } from 'vuex'
+import { useResultStore } from '@/modules/Result/store'
 import { useRoute } from 'vue-router'
 
 export default defineComponent({
   name: 'ResultOverView',
   setup () {
-    const store = useStore()
+    const resultStore = useResultStore()
     const route = useRoute()
-    const overviewData = computed(() => store.state.Result.overviewData)
+    const overviewData = computed(() => resultStore.overviewData)
 
     async function init () {
-      const { error, data } = await store.dispatch(
-        ResultStore.getAction('getResultOverview'),
-        {
-          projectId: route.params.projectId
-        }
-      )
+      const { error, data } = await resultStore.getResultOverview({
+        projectId: route.params.projectId
+      })
 
       if (error) return
 

@@ -1,5 +1,5 @@
 import router from '@/router'
-import store from '@/store'
+import { useUserAccountStore } from '@/modules/UserAccount/store'
 import Cookie from 'js-cookie'
 import { allowlist } from '@/router/auth-list'
 import { systemTitle } from '@/locales/data'
@@ -12,6 +12,7 @@ NProgress.configure({
 })
 
 router.beforeEach(async (to, from, next) => {
+  const userAccountStore = useUserAccountStore()
   NProgress.start()
 
   document.title = `${to.meta.title || ''} - ${systemTitle}`
@@ -30,10 +31,11 @@ router.beforeEach(async (to, from, next) => {
   }
 
   // 获取用户信息
-  const { data, error } = await store.dispatch('UserAccount/getUserInfo')
+
+  const { data, error } = await userAccountStore.getUserInfo()
 
   if (error) {
-    store.dispatch('UserAccount/setLanguage', {
+    userAccountStore.setLanguage({
       locale: currentRouteLocale || data.language
     })
     Cookie.remove('token')
@@ -44,7 +46,7 @@ router.beforeEach(async (to, from, next) => {
 
   if (data.user.username && Cookie.get('name') === data.user.username) {
     // TODO: It must be used together with the backend
-    store.dispatch('UserAccount/setLanguage', {
+    userAccountStore.setLanguage({
       locale: currentRouteLocale || data.language
     })
     next()
@@ -54,10 +56,10 @@ router.beforeEach(async (to, from, next) => {
   // ElMessage.error('登录失败，请重新登录')
   Cookie.remove('token')
   Cookie.remove('name')
-  store.dispatch('UserAccount/setLanguage', {
-    locale: currentRouteLocale || store.state.UserAccount.locale
+  userAccountStore.setLanguage({
+    locale: currentRouteLocale || userAccountStore.locale
   })
-  next(`/${currentRouteLocale || store.state.UserAccount.locale}/user/login`)
+  next(`/${currentRouteLocale || userAccountStore.locale}/user/login`)
 })
 
 router.afterEach((to) => {

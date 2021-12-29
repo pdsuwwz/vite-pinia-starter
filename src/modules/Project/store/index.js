@@ -8,14 +8,12 @@ import {
   createProject,
   updateTogglePublishStatus
 } from '@/modules/Project/api'
-import mixin from '@/store/utils/mixin'
 import {
   projectDetail,
   projectList
 } from '@/modules/Project/data'
 
 export const useProjectStore = defineStore('Project', {
-  // _name: 'Project',
   state: () => {
     return {
       demoList: {},
@@ -70,7 +68,6 @@ export const useProjectStore = defineStore('Project', {
       const res = await updateTogglePublishStatus(params)
       return this.filterResponse(res, null)
     }
-  },
-  ...mixin
+  }
 })
 

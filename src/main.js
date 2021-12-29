@@ -2,25 +2,20 @@ import { createApp } from 'vue'
 
 import router from '@/router'
 import '@/router/permission'
+import { setupStore } from '@/store'
 
-import store from '@/store'
-import { setupStore } from '@/store/pinia'
-
-import App from './App.vue'
+import App from '@/App.vue'
 
 import ElementPlus from 'element-plus'
-
 import Fonts from '@/assets/fonts'
-
 import GlobalComponents from '@/components'
-import Mixin from './mixins'
-import Widgets from './widgets'
+import Mixin from '@/mixins'
+import Widgets from '@/widgets'
 
 const app = createApp(App)
 
 app
   .use(router)
-  .use(store)
 
 setupStore(app)
 

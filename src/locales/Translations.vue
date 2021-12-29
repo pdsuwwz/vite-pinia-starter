@@ -31,7 +31,8 @@
 <script>
 import { defineComponent, ref } from 'vue'
 import { localesMapping } from '@/locales'
-import { useStore } from 'vuex'
+import { useUserAccountStore } from '@/modules/UserAccount/store'
+
 import { useRoute, useRouter } from 'vue-router'
 
 import LogoIcon from '@/locales/LogoIcon.vue'
@@ -50,7 +51,7 @@ export default defineComponent({
   setup () {
     const route = useRoute()
     const router = useRouter()
-    const store = useStore()
+    const userAccountStore = useUserAccountStore()
     const localesList = ref(localesMapping)
     const handleChange = (targetLocaleItem) => {
       setTimeout(() => {
@@ -61,7 +62,7 @@ export default defineComponent({
             locale: localeCode
           }
         })
-        store.dispatch('UserAccount/setLanguage', {
+        userAccountStore.setLanguage({
           locale: localeCode
         })
       })
