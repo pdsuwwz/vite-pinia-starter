@@ -1,13 +1,14 @@
 <template>
   <el-dropdown
     class="translations-box"
+    popper-class="translations-box"
     :class="{
       'is-dark': dark
     }"
     trigger="click"
     @command="handleChange"
   >
-    <span>
+    <span class="icon-outer">
       <!-- Translations<el-icon class="el-icon--right">
         <ArrowDown />
       </el-icon> -->
@@ -21,15 +22,18 @@
           v-for="(localeItem, index) in localesList"
           :key="index"
           :command="localeItem"
+          :disabled="currentLocale === localeItem.localeCode"
         >
-          {{ localeItem.localeName }}
+          <span class="custom-dropdown-item">
+            {{ localeItem.localeName }}
+          </span>
         </el-dropdown-item>
       </el-dropdown-menu>
     </template>
   </el-dropdown>
 </template>
 <script>
-import { defineComponent, ref } from 'vue'
+import { computed, defineComponent, ref } from 'vue'
 import { localesMapping } from '@/locales'
 import { useUserAccountStore } from '@/modules/UserAccount/store'
 
@@ -53,6 +57,8 @@ export default defineComponent({
     const router = useRouter()
     const userAccountStore = useUserAccountStore()
     const localesList = ref(localesMapping)
+    const currentLocale = computed(() => userAccountStore.locale)
+
     const handleChange = (targetLocaleItem) => {
       setTimeout(() => {
         const { localeCode } = targetLocaleItem
@@ -69,6 +75,7 @@ export default defineComponent({
     }
     return {
       localesList,
+      currentLocale,
       handleChange
     }
   }
@@ -84,12 +91,15 @@ export default defineComponent({
   &.is-dark {
     color: #495164;
   }
-  .el-dropdown-selfdefine {
+  .icon-outer {
     display: flex;
     align-items: center;
     &:hover {
       color: $--color-primary;
     }
+  }
+  .custom-dropdown-item {
+    white-space: nowrap;
   }
 }
 </style>

@@ -31,6 +31,7 @@
         </template>
       </UserAccountContainerLayout>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -211,12 +212,14 @@ export default defineComponent({
   background-image: url('@/assets/images/logo-background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
   .user-account-nav {
     display: flex;
     justify-content: space-between;
     color: #f0f2f5;
     padding: 0px 16px;
+    box-shadow: 0px -3px 8px 3px #727272;
+    // box-shadow: 0 1px 4px 3px rgb(0 21 41 / 8%);
+    background-color: rgba(#8d8b89, 30%);
     .nav-left,
     .nav-right {
       display: flex;
