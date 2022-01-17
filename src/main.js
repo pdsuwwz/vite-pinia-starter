@@ -20,9 +20,7 @@ app
 setupStore(app)
 
 app
-  .use(ElementPlus, {
-    size: 'small'
-  })
+  .use(ElementPlus)
   .use(GlobalComponents)
   .use(Widgets)
   .use(Fonts)
