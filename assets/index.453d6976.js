@@ -1,1 +1,0 @@
-import{_ as a}from"./index.ef5a87b9.js";import{I as e,o,s as r}from"./vendor.feb4db6d.js";const d=e({name:"Xx"}),n={class:"xxx-container"};var p=a(d,[["render",function(s,t,c,f,i,x){return o(),r("div",n)}],["__scopeId","data-v-5b4a243c"]]);export{p as default};
