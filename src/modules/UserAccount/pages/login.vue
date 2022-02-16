@@ -46,7 +46,7 @@ import {
   reactive,
   ref
 } from 'vue'
-import { useLocale } from 'element-plus'
+import { ElMessage, useLocale } from 'element-plus'
 import { Promotion } from '@element-plus/icons-vue'
 
 import UserAccountContainerLayout from '@/modules/UserAccount/components/ContainerLayout.vue'
@@ -171,7 +171,7 @@ export default defineComponent({
         router
           .replace(`/${route.params.locale || ''}`)
           .then(() => {
-            proxy.$message({
+            ElMessage.success({
               type: 'success',
               message: '登录成功'
             })
