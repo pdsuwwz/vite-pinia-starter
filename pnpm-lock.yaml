@@ -11,7 +11,7 @@ specifiers:
   '@fortawesome/free-solid-svg-icons': 6.0.0
   '@fortawesome/vue-fontawesome': ~3.0.0-5
   '@sucrase/jest-plugin': ^2.2.0
-  '@vitejs/plugin-vue': 2.2.0
+  '@vitejs/plugin-vue': 2.2.2
   '@vue/compiler-sfc': ^3.2.31
   '@vue/test-utils': ^2.0.0-rc.18
   '@vue/vue3-jest': ^27.0.0-alpha.4
@@ -62,7 +62,7 @@ devDependencies:
   '@babel/eslint-parser': 7.17.0_@babel+core@7.17.4+eslint@8.9.0
   '@babel/preset-env': 7.16.11_@babel+core@7.17.4
   '@sucrase/jest-plugin': 2.2.0
-  '@vitejs/plugin-vue': 2.2.0_vite@2.8.3+vue@3.2.31
+  '@vitejs/plugin-vue': 2.2.2_vite@2.8.3+vue@3.2.31
   '@vue/compiler-sfc': 3.2.31
   '@vue/test-utils': 2.0.0-rc.18_vue@3.2.31
   '@vue/vue3-jest': 27.0.0-alpha.4_ce8c290669e6755ddd5da66fce39e264
@@ -1689,8 +1689,8 @@ packages:
       '@types/yargs-parser': 20.2.1
     dev: true
 
-  /@vitejs/plugin-vue/2.2.0_vite@2.8.3+vue@3.2.31:
-    resolution: {integrity: sha512-wXigM1EwN2G7rZcwG6kLk9ivvIMhx2363tCEvMBiXcTu5nePM/12hUPVzPb83Uugt6U+zom1gTpJopi/Ow/jwg==}
+  /@vitejs/plugin-vue/2.2.2_vite@2.8.3+vue@3.2.31:
+    resolution: {integrity: sha512-3C0s45VOwIFEDU+2ownJOpb0zD5fnjXWaHVOLID2R1mYOlAx3doNBFnNbVjaZvpke/L7IdPJXjpyYpXZToDKig==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       vite: ^2.5.10
