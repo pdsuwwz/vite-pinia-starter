@@ -12,6 +12,10 @@
 
 <!-- > For Typescript: https://github.com/pdsuwwz/vite-ts-starter -->
 
+## Screenshot
+
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/19891724/154830184-7902ddfa-0438-4751-b5a3-9d128082ed67.png">
+
 ## Environment Support
 
 * Vue 3.x
