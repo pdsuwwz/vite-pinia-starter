@@ -3,7 +3,7 @@
     v-model.trim="searchValue"
     v-bind="$attrs"
     class="search-input-container"
-    size="medium"
+    size="default"
     popper-class="search-select-container"
     :trigger-on-focus="false"
     :fetch-suggestions="handleSearch"
@@ -196,6 +196,6 @@ export default defineComponent({
   }
 }
 .search-select-highlight {
-  color: $--color-primary;
+  color: $color-primary;
 }
 </style>
