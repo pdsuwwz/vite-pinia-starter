@@ -1,8 +1,8 @@
 
-@import '@/styles/global-class.scss';
-@import '@/styles/element-variables.scss';
-@import '@/styles/theme.scss';
-@import '@/styles/element-status.scss';
+@use '@/styles/global-class.scss';
+@use '@/styles/element-variables.scss';
+@use '@/styles/theme.scss';
+@use '@/styles/element-status.scss';
 
 body {
   width: 100vw;
