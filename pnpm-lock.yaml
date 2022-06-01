@@ -4,7 +4,7 @@ specifiers:
   '@babel/core': ^7.17.5
   '@babel/eslint-parser': ^7.17.0
   '@babel/preset-env': ^7.16.11
-  '@element-plus/icons-vue': 1.1.4
+  '@element-plus/icons-vue': 2.0.1
   '@fortawesome/fontawesome-svg-core': 6.1.1
   '@fortawesome/free-brands-svg-icons': 6.1.1
   '@fortawesome/free-regular-svg-icons': 6.1.1
@@ -41,7 +41,7 @@ specifiers:
   vue-router: ^4.0.12
 
 dependencies:
-  '@element-plus/icons-vue': 1.1.4_vue@3.2.31
+  '@element-plus/icons-vue': 2.0.1_vue@3.2.31
   '@fortawesome/fontawesome-svg-core': 6.1.1
   '@fortawesome/free-brands-svg-icons': 6.1.1
   '@fortawesome/free-regular-svg-icons': 6.1.1
@@ -1268,6 +1268,14 @@ packages:
 
   /@element-plus/icons-vue/1.1.4_vue@3.2.31:
     resolution: {integrity: sha512-Iz/nHqdp1sFPmdzRwHkEQQA3lKvoObk8azgABZ81QUOpW9s/lUyQVUSh0tNtEPZXQlKwlSh7SPgoVxzrE0uuVQ==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      vue: 3.2.31
+    dev: false
+
+  /@element-plus/icons-vue/2.0.1_vue@3.2.31:
+    resolution: {integrity: sha512-a1N6IXw5AZx6JZQDoMBG9E1Pes1BogGTpL192SeI/piMdpEEcm4cn+MkDxhAvA9SuF1dFbdAU54EoS0xKQhjwg==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
