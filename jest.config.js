@@ -1,5 +1,11 @@
 module.exports = {
   testEnvironment: 'node',
+  testEnvironmentOptions: {
+    customExportConditions: [
+      'node',
+      'node-addons'
+    ]
+  },
 
   moduleFileExtensions: ['js', 'vue'],
   moduleNameMapper: {
