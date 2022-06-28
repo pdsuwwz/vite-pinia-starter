@@ -14,7 +14,7 @@ specifiers:
   '@vitejs/plugin-vue': ^2.2.2
   '@vue/compiler-sfc': ^3.2.31
   '@vue/test-utils': ^2.0.0
-  '@vue/vue3-jest': 28.0.0
+  '@vue/vue3-jest': 28.0.1
   axios: 0.27.2
   babel-jest: ^28.1.1
   babel-plugin-transform-vite-meta-env: ^1.0.3
@@ -66,7 +66,7 @@ devDependencies:
   '@vitejs/plugin-vue': 2.3.3_vite@2.9.10+vue@3.2.37
   '@vue/compiler-sfc': 3.2.37
   '@vue/test-utils': 2.0.0_vue@3.2.37
-  '@vue/vue3-jest': 28.0.0_u6vuqatx2vqtq2mrvxe7vu5j6m
+  '@vue/vue3-jest': 28.0.1_u6vuqatx2vqtq2mrvxe7vu5j6m
   babel-jest: 28.1.1_@babel+core@7.18.2
   babel-plugin-transform-vite-meta-env: 1.0.3
   cross-env: 7.0.3
@@ -1891,8 +1891,8 @@ packages:
       vue: 3.2.37
     dev: true
 
-  /@vue/vue3-jest/28.0.0_u6vuqatx2vqtq2mrvxe7vu5j6m:
-    resolution: {integrity: sha512-X5ZgZuG4d9N6x5lZAWWtTCSo4lO6+ytV5IekoyWVQYC9sKbYenrGUrCvy/kSftK6kPe8K/LeSsYj2VMJAUdeww==}
+  /@vue/vue3-jest/28.0.1_u6vuqatx2vqtq2mrvxe7vu5j6m:
+    resolution: {integrity: sha512-fdzbp4HvU8dbo3Pup5sgll4R6hmBf5dHOjpLOFPiwwGnuA57g+Fe2u56nmBVYNd+XA4RInQobdBCl5GbnmhGhw==}
     engines: {node: '>10'}
     peerDependencies:
       '@babel/core': 7.x
@@ -5183,7 +5183,7 @@ packages:
     dev: true
 
   /to-fast-properties/2.0.0:
-    resolution: {integrity: sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=}
+    resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
     engines: {node: '>=4'}
 
   /to-regex-range/5.0.1:
