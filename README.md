@@ -8,7 +8,7 @@
 
 🐝  Starter Example using Vue 3.x, Vite 2.x and Pinia@next 🍍
 
-**Live demo:** [Pinia Starter](https://pdsuwwz.github.io/vite-pinia-starter)
+[🚀 Live Demo 在线体验](https://pdsuwwz.github.io/vite-pinia-starter)
 
 <!-- > For Typescript: https://github.com/pdsuwwz/vite-ts-starter -->
 
