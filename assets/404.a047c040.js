@@ -1,1 +1,0 @@
-import{_ as n,o,b as t,d as a}from"./index.edb60d40.js";const e={name:"NotFound"},r=[a("h1",null,"NOT-FOUND 404",-1)],m=n(e,[["render",function(s,u,d,l,c,f){return o(),t("div",null,r)}]]);export{m as default};
