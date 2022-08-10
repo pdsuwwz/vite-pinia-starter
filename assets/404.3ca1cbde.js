@@ -1,0 +1,1 @@
+import{_ as n,o as t,b as o,d as r}from"./index.bbbcd1e8.js";const s={name:"NotFound"},a=[r("h1",null,"NOT-FOUND 404",-1)],m=n(s,[["render",function(d,e,u,l,c,f){return t(),o("div",null,a)}]]);export{m as default};
