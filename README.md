@@ -6,7 +6,7 @@
 [![Author](https://img.shields.io/badge/Author-Wisdom-9cf)](https://github.com/pdsuwwz)
 [![License](https://img.shields.io/github/license/pdsuwwz/vite-pinia-starter?color=blue)](https://github.com/pdsuwwz/vite-pinia-starter/blob/main/LICENSE)
 
-🐝  Starter Example using `Vue 3.x`, `Vite 3.x` and `Pinia@next` 🍍
+🐝  Starter Example using `Vue 3.x`, `Vite 4.x` and `Pinia@next` 🍍
 
 [🚀 Live Demo 在线体验](https://pdsuwwz.github.io/vite-pinia-starter)
 
