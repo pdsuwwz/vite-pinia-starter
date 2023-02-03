@@ -1,1 +1,0 @@
-import{ai as e,x as t,y as s,z as n}from"./_plugin-vue_export-helper-428680c1.js";const o=t({name:"UserAccountSetting"}),_={class:"wrap-user-setting"};function c(a,r,d,f,i,p){return s(),n("div",_," 账号设置 ")}const l=e(o,[["render",c],["__scopeId","data-v-dff448f1"]]);export{l as default};
