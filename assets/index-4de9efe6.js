@@ -1,0 +1,1 @@
+import{ai as e,x as n,y as t,z as o}from"./_plugin-vue_export-helper-1773af58.js";const s=n({name:"Xx"}),_={class:"xxx-container"};function a(c,d,r,i,p,x){return t(),o("div",_)}const l=e(s,[["render",a],["__scopeId","data-v-808232f5"]]);export{l as default};
