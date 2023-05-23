@@ -29,7 +29,7 @@ export const useProjectStore = defineStore('Project', {
     }
   },
   getters: {
-    demoList: (state) => state.demoList
+    // demoList: (state) => state.demoList
   },
   actions: {
     async getSearchProjectByQuery (query) {
