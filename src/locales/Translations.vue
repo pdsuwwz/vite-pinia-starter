@@ -5,7 +5,7 @@
     :class="{
       'is-dark': dark
     }"
-    trigger="click"
+    trigger="hover"
     @command="handleChange"
   >
     <span class="icon-outer">

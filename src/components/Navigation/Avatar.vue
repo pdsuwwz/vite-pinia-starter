@@ -1,7 +1,7 @@
 <template>
   <el-dropdown
     class="navigation-avatar"
-    trigger="click"
+    trigger="hover"
   >
     <div style="outline: none; padding: 0 12px;">
       <img
