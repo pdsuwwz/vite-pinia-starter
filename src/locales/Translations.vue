@@ -86,21 +86,24 @@ export default defineComponent({
   display: flex;
   align-items: center;
   color: #fff;
+  outline: none;
   cursor: initial;
   user-select: none;
+
   &.is-dark {
     color: #495164;
   }
+
   .icon-outer {
     display: flex;
     align-items: center;
-    & > * {
-      transition: .3s;
-    }
+    outline: none;
+
     &:hover > * {
       color: $color-primary;
     }
   }
+
   .custom-dropdown-item {
     white-space: nowrap;
   }

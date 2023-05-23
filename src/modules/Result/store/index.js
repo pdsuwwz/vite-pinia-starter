@@ -17,7 +17,7 @@ export const useResultStore = defineStore('Result', {
     }
   },
   getters: {
-    demoList: state => state.demoList
+    // demoList: state => state.demoList
   },
   actions: {
     async getResultOverview (query) {
