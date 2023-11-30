@@ -98,8 +98,8 @@ devDependencies:
     specifier: 6.1.1
     version: 6.1.1(eslint@8.41.0)
   eslint-plugin-vue:
-    specifier: 9.15.1
-    version: 9.15.1(eslint@8.41.0)
+    specifier: 9.19.2
+    version: 9.19.2(eslint@8.41.0)
   identity-obj-proxy:
     specifier: ^3.0.0
     version: 3.0.0
@@ -3173,8 +3173,8 @@ packages:
       eslint: 8.41.0
     dev: true
 
-  /eslint-plugin-vue@9.15.1(eslint@8.41.0):
-    resolution: {integrity: sha512-CJE/oZOslvmAR9hf8SClTdQ9JLweghT6JCBQNrT2Iel1uVw0W0OLJxzvPd6CxmABKCvLrtyDnqGV37O7KQv6+A==}
+  /eslint-plugin-vue@9.19.2(eslint@8.41.0):
+    resolution: {integrity: sha512-CPDqTOG2K4Ni2o4J5wixkLVNwgctKXFu6oBpVJlpNq7f38lh9I80pRTouZSJ2MAebPJlINU/KTFSXyQfBUlymA==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
@@ -3184,8 +3184,8 @@ packages:
       natural-compare: 1.4.0
       nth-check: 2.1.1
       postcss-selector-parser: 6.0.13
-      semver: 7.5.1
-      vue-eslint-parser: 9.3.0(eslint@8.41.0)
+      semver: 7.5.4
+      vue-eslint-parser: 9.3.2(eslint@8.41.0)
       xml-name-validator: 4.0.0
     transitivePeerDependencies:
       - supports-color
@@ -5162,6 +5162,14 @@ packages:
       lru-cache: 6.0.0
     dev: true
 
+  /semver@7.5.4:
+    resolution: {integrity: sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      lru-cache: 6.0.0
+    dev: true
+
   /shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
     engines: {node: '>=8'}
@@ -5592,8 +5600,8 @@ packages:
       vue: 3.3.4
     dev: false
 
-  /vue-eslint-parser@9.3.0(eslint@8.41.0):
-    resolution: {integrity: sha512-48IxT9d0+wArT1+3wNIy0tascRoywqSUe2E1YalIC1L8jsUGe5aJQItWfRok7DVFGz3UYvzEI7n5wiTXsCMAcQ==}
+  /vue-eslint-parser@9.3.2(eslint@8.41.0):
+    resolution: {integrity: sha512-q7tWyCVaV9f8iQyIA5Mkj/S6AoJ9KBN8IeUSf3XEmBrOtxOZnfTg5s4KClbZBCK3GtnT/+RyCLZyDHuZwTuBjg==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=6.0.0'
@@ -5605,7 +5613,7 @@ packages:
       espree: 9.5.2
       esquery: 1.5.0
       lodash: 4.17.21
-      semver: 7.5.1
+      semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
     dev: true
