@@ -33,12 +33,12 @@ export const useProjectStore = defineStore('Project', {
   },
   actions: {
     async getSearchProjectByQuery (query) {
-      await sleep(2000)
+      await sleep(300)
       const res = await getProjectList(query)
       return this.filterResponse(res, null, () => {})
     },
     async getProjectList (params) {
-      await sleep(2000)
+      await sleep(300)
       // const res = await getProjectList(params)
       const res = {
         msg: 'ok',
@@ -59,7 +59,7 @@ export const useProjectStore = defineStore('Project', {
         error: 0,
         data: {}
       }
-      await sleep(1000)
+      await sleep(500)
       return this.filterResponse(res, () => {
         this.projectList.push(JSON.parse(JSON.stringify(projectDetail)))
       })
