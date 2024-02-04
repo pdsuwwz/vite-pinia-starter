@@ -2,11 +2,12 @@ import axios from 'axios'
 import Cookie from 'js-cookie'
 
 import { camelizeKeys, decamelizeKeys } from './camelCase'
-import Router from '../router/index'
+import { useOutsideRouter } from '@/store/hooks/useOutsideRouter'
 
 // redirect error
 function errorRedirect (url) {
-  Router.push(`/${url}`)
+  const { router } = useOutsideRouter()
+  router.push(url)
 }
 // code Message
 export const codeMessage = {
