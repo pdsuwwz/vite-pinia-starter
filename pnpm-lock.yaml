@@ -117,13 +117,13 @@ devDependencies:
     version: 4.12.1
   sass:
     specifier: ^1.71.1
-    version: 1.71.1
+    version: 1.72.0
   sucrase:
     specifier: ^3.35.0
     version: 3.35.0
   vite:
     specifier: ^5.1.5
-    version: 5.1.5(sass@1.71.1)
+    version: 5.1.5(sass@1.72.0)
 
 packages:
 
@@ -2262,7 +2262,7 @@ packages:
       vite: ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.1.5(sass@1.71.1)
+      vite: 5.1.5(sass@1.72.0)
       vue: 3.4.21
     dev: true
 
@@ -5483,8 +5483,8 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: true
 
-  /sass@1.71.1:
-    resolution: {integrity: sha512-wovtnV2PxzteLlfNzbgm1tFXPLoZILYAMJtvoXXkD7/+1uP41eKkIt1ypWq5/q2uT94qHjXehEYfmjKOvjL9sg==}
+  /sass@1.72.0:
+    resolution: {integrity: sha512-Gpczt3WA56Ly0Mn8Sl21Vj94s1axi9hDIzDFn9Ph9x3C3p4nNyvsqJoQyVXKou6cBlfFWEgRW4rT8Tb4i3XnVA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -5969,7 +5969,7 @@ packages:
       convert-source-map: 2.0.0
     dev: true
 
-  /vite@5.1.5(sass@1.71.1):
+  /vite@5.1.5(sass@1.72.0):
     resolution: {integrity: sha512-BdN1xh0Of/oQafhU+FvopafUp6WaYenLU/NFoL5WyJL++GxkNfieKzBhM24H3HVsPQrlAqB7iJYTHabzaRed5Q==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -6000,7 +6000,7 @@ packages:
       esbuild: 0.19.12
       postcss: 8.4.35
       rollup: 4.12.1
-      sass: 1.71.1
+      sass: 1.72.0
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
