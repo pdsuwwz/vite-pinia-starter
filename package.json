@@ -73,7 +73,7 @@
     "cross-env": "^7.0.3",
     "eslint": "^8.57.0",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-n": "^14.0.0",
     "eslint-plugin-promise": "6.1.1",
     "eslint-plugin-vue": "9.23.0",
     "identity-obj-proxy": "^3.0.0",
