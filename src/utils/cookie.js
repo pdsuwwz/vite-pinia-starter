@@ -1,8 +1,8 @@
 const tokenKey = 'share_token'
 
 export function getCookieToken () {
-  const value = '; ' + document.cookie
-  const parts = value.split('; ' + tokenKey + '=')
+  const value = `; ${ document.cookie}`
+  const parts = value.split(`; ${ tokenKey }=`)
   if (parts.length === 2) return parts.pop().split(';').shift()
 }
 
@@ -14,9 +14,9 @@ export function setCookieToken (value) {
   const exp = new Date(nd)
   const domain = document.domain
   exp.setTime(exp.getTime() + 360 * 60 * 60 * 1000)
-  document.cookie = tokenKey + '=' + escape(value) + ';path=/;expires=' + exp.toGMTString() + ';domain=' + domain + ';'
+  document.cookie = `${tokenKey }=${ escape(value) };path=/;expires=${ exp.toGMTString() };domain=${ domain };`
 }
 
 export function deleteCookie () {
-  document.cookie = tokenKey + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;'
+  document.cookie = `${tokenKey }=;expires=Thu, 01 Jan 1970 00:00:01 GMT;`
 }
