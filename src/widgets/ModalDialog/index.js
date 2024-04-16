@@ -1,4 +1,4 @@
-import { createVNode, render, nextTick } from 'vue'
+import { createVNode, nextTick, render } from 'vue'
 import Modal from '@/widgets/ModalDialog/modal.vue'
 
 const extractData = (options) => {

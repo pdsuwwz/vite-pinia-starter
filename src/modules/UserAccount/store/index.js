@@ -1,9 +1,9 @@
 import { defineStore } from 'pinia'
 import { sleep } from '@/utils/request'
 import {
+  getUserInfoData,
   login,
   logout,
-  getUserInfoData,
   updateChangeLanguage
 } from '@/modules/UserAccount/api'
 

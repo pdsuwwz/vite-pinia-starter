@@ -1,11 +1,11 @@
 import {
-  isFunction,
-  isObject,
   isArray,
-  isDate,
-  isRegExp,
   isBoolean,
-  isNumberical
+  isDate,
+  isFunction,
+  isNumberical,
+  isObject,
+  isRegExp
 } from '@/utils/type'
 
 // camelize('hello_world') -> 'helloWorld'
@@ -14,7 +14,7 @@ export function camelize (string) {
     return string
   }
 
-  string = string.replace(/[-_\s]+(.)?/g, function (match, chr) {
+  string = string.replace(/[-_\s]+(.)?/g, (match, chr) => {
     return chr ? chr.toUpperCase() : ''
   })
 

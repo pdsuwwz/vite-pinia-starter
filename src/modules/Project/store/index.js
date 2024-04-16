@@ -3,9 +3,9 @@ import { defineStore } from 'pinia'
 
 import { sleep } from '@/utils/request'
 import {
-  getProjectList,
-  getProjectDetail,
   createProject,
+  getProjectDetail,
+  getProjectList,
   updateTogglePublishStatus
 } from '@/modules/Project/api'
 import {
