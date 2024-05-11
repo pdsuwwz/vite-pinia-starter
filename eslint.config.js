@@ -1,47 +1,106 @@
 // import antfu from '@antfu/eslint-config'
 // export default antfu()
 
-import globals from 'globals';
-import { defineFlatConfig } from 'eslint-define-config';
+import globals from 'globals'
+import { defineFlatConfig } from 'eslint-define-config'
 
-import * as parserBabel from '@babel/eslint-parser';
+import * as parserVue from 'vue-eslint-parser'
+import pluginVue from 'eslint-plugin-vue'
+import js from '@eslint/js'
 
-import * as parserVue from 'vue-eslint-parser';
-import pluginVue from 'eslint-plugin-vue';
-import js from '@eslint/js';
+import stylistic from '@stylistic/eslint-plugin'
 
 
 export default defineFlatConfig([
   {
+    ignores: [
+      'public',
+      'build',
+      'dist',
+      'node_modules',
+      'coverage',
+      'src/assets/**'
+    ]
+  },
+  {
+    plugins: {
+      '@stylistic': stylistic
+    },
+    rules: {
+      '@stylistic/semi': ['error', 'never'],
+      '@stylistic/no-extra-semi': 'error',
+      '@stylistic/template-curly-spacing': ['error', 'always'],
+      '@stylistic/space-before-blocks': ['error', 'always'],
+      '@stylistic/indent': ['error', 2],
+      '@stylistic/object-curly-newline': ['error', {
+        'ObjectExpression': {
+          // 如果对象有属性，则要求换行。空对象则忽略
+          'minProperties': 1,
+          // 保持一致性
+          'consistent': true
+        }
+      }],
+      '@stylistic/object-property-newline': 'error',
+      '@stylistic/key-spacing': ['error', {
+        'beforeColon': false,
+        'afterColon': true
+      }],
+      '@stylistic/type-annotation-spacing': ['error', {
+        'before': true,
+        'after': true,
+        'overrides': {
+          'colon': {
+            'before': false,
+            'after': true
+          }
+        }
+      }],
+      '@stylistic/no-trailing-spaces': ['error']
+    }
+  },
+  {
     ...js.configs.recommended,
-    files: ['**/*.vue', '**/*.?([cm])js'],
-    ignores: ['public', 'build', 'dist', 'node_modules', 'coverage', 'src/assets/**'],
     languageOptions: {
+      ecmaVersion: 2022,
       globals: {
+        document: 'readonly',
+        navigator: 'readonly',
+        window: 'readonly',
         ...globals.node,
-        ...globals.es2015,
-        ...globals.browser,
-        ...globals.jest
+        ...globals.es2021,
+        ...globals.browser
       },
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-          legacyDecorators: true
+          jsx: true
         },
         ecmaVersion: 2022,
         sourceType: 'module'
-      }
+      },
+      sourceType: 'module'
     },
     rules: {
-      'accessor-pairs': ['error', { enforceForClassMembers: true, setWithoutGet: true }],
+      'accessor-pairs': ['error', {
+        enforceForClassMembers: true,
+        setWithoutGet: true
+      }],
       'array-callback-return': 'error',
       'block-scoped-var': 'error',
-      'comma-spacing': ['error', { after: true, before: false }],
+      'comma-spacing': ['error', {
+        after: true,
+        before: false
+      }],
       'constructor-super': 'error',
       'default-case-last': 'error',
-      'dot-notation': ['error', { allowKeywords: true }],
-      'eqeqeq': ['error', 'smart'],
-      'new-cap': ['error', { capIsNew: false, newIsCap: true, properties: true }],
+      'dot-notation': ['error', {
+        allowKeywords: true
+      }],
+      'eqeqeq': ['error', 'always'],
+      'new-cap': ['error', {
+        capIsNew: false,
+        newIsCap: true,
+        properties: true
+      }],
       'no-alert': 'error',
       'no-array-constructor': 'error',
       'no-async-promise-executor': 'error',
@@ -50,7 +109,9 @@ export default defineFlatConfig([
       'no-class-assign': 'error',
       'no-compare-neg-zero': 'error',
       'no-cond-assign': ['error', 'always'],
-      'no-console': ['error', { allow: ['log', 'warn', 'error'] }],
+      'no-console': ['error', {
+        allow: ['log', 'warn', 'dir', 'error']
+      }],
       'no-const-assign': 'error',
       'no-control-regex': 'error',
       'no-debugger': 'error',
@@ -59,7 +120,9 @@ export default defineFlatConfig([
       'no-dupe-class-members': 'error',
       'no-dupe-keys': 'error',
       'no-duplicate-case': 'error',
-      'no-empty': ['error', { allowEmptyCatch: true }],
+      'no-empty': ['error', {
+        allowEmptyCatch: true
+      }],
       'no-empty-character-class': 'error',
       'no-empty-pattern': 'error',
       'no-eval': 'error',
@@ -75,7 +138,10 @@ export default defineFlatConfig([
       'no-invalid-regexp': 'error',
       'no-irregular-whitespace': 'error',
       'no-iterator': 'error',
-      'no-labels': ['error', { allowLoop: false, allowSwitch: false }],
+      'no-labels': ['error', {
+        allowLoop: false,
+        allowSwitch: false
+      }],
       'no-lone-blocks': 'error',
       'no-loss-of-precision': 'error',
       'no-misleading-character-class': 'error',
@@ -89,20 +155,43 @@ export default defineFlatConfig([
       'no-octal-escape': 'error',
       'no-proto': 'error',
       'no-prototype-builtins': 'error',
-      'no-redeclare': ['error', { builtinGlobals: false }],
+      'no-redeclare': ['error', {
+        builtinGlobals: false
+      }],
       'no-regex-spaces': 'error',
       'no-restricted-globals': [
         'error',
-        { message: 'Use `globalThis` instead.', name: 'global' },
-        { message: 'Use `globalThis` instead.', name: 'self' }
+        {
+          message: 'Use `globalThis` instead.',
+          name: 'global'
+        },
+        {
+          message: 'Use `globalThis` instead.',
+          name: 'self'
+        }
       ],
       'no-restricted-properties': [
         'error',
-        { message: 'Use `Object.getPrototypeOf` or `Object.setPrototypeOf` instead.', property: '__proto__' },
-        { message: 'Use `Object.defineProperty` instead.', property: '__defineGetter__' },
-        { message: 'Use `Object.defineProperty` instead.', property: '__defineSetter__' },
-        { message: 'Use `Object.getOwnPropertyDescriptor` instead.', property: '__lookupGetter__' },
-        { message: 'Use `Object.getOwnPropertyDescriptor` instead.', property: '__lookupSetter__' }
+        {
+          message: 'Use `Object.getPrototypeOf` or `Object.setPrototypeOf` instead.',
+          property: '__proto__'
+        },
+        {
+          message: 'Use `Object.defineProperty` instead.',
+          property: '__defineGetter__'
+        },
+        {
+          message: 'Use `Object.defineProperty` instead.',
+          property: '__defineSetter__'
+        },
+        {
+          message: 'Use `Object.getOwnPropertyDescriptor` instead.',
+          property: '__lookupGetter__'
+        },
+        {
+          message: 'Use `Object.getOwnPropertyDescriptor` instead.',
+          property: '__lookupSetter__'
+        }
       ],
       'no-restricted-syntax': [
         'error',
@@ -112,7 +201,9 @@ export default defineFlatConfig([
         'TSEnumDeclaration[const=true]',
         'TSExportAssignment'
       ],
-      'no-self-assign': ['error', { props: true }],
+      'no-self-assign': ['error', {
+        props: true
+      }],
       'no-self-compare': 'error',
       'no-sequences': 'error',
       'no-shadow-restricted-names': 'error',
@@ -121,9 +212,12 @@ export default defineFlatConfig([
       'no-this-before-super': 'error',
       'no-throw-literal': 'error',
       'no-undef': 'error',
+      'no-undef-init': 'error',
       'no-unexpected-multiline': 'error',
       'no-unmodified-loop-condition': 'error',
-      'no-unneeded-ternary': ['error', { defaultAssignment: false }],
+      'no-unneeded-ternary': ['error', {
+        defaultAssignment: false
+      }],
       'no-unreachable': 'error',
       'no-unreachable-loop': 'error',
       'no-unsafe-finally': 'error',
@@ -133,8 +227,17 @@ export default defineFlatConfig([
         allowTaggedTemplates: true,
         allowTernary: true
       }],
-      'no-unused-vars': ['warn'],
-      'no-use-before-define': ['error', { classes: false, functions: false, variables: true }],
+      'no-unused-vars': ['warn', {
+        args: 'none',
+        caughtErrors: 'none',
+        ignoreRestSiblings: true,
+        vars: 'all'
+      }],
+      'no-use-before-define': ['error', {
+        classes: false,
+        functions: false,
+        variables: false
+      }],
       'no-useless-backreference': 'error',
       'no-useless-call': 'error',
       'no-useless-catch': 'error',
@@ -144,6 +247,8 @@ export default defineFlatConfig([
       'no-useless-return': 'error',
       'no-var': 'error',
       'no-with': 'error',
+      'space-infix-ops': 'error',
+      'object-curly-spacing': ['error', 'always'],
       'object-shorthand': [
         'error',
         'always',
@@ -152,7 +257,9 @@ export default defineFlatConfig([
           ignoreConstructors: false
         }
       ],
-      'one-var': ['error', { initialized: 'never' }],
+      'one-var': ['error', {
+        initialized: 'never'
+      }],
       'prefer-arrow-callback': [
         'error',
         {
@@ -169,7 +276,9 @@ export default defineFlatConfig([
       ],
       'prefer-exponentiation-operator': 'error',
       'prefer-promise-reject-errors': 'error',
-      'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
+      'prefer-regex-literals': ['error', {
+        disallowRedundantWrapping: true
+      }],
       'prefer-rest-params': 'error',
       'prefer-spread': 'error',
       'prefer-template': 'error',
@@ -212,14 +321,7 @@ export default defineFlatConfig([
     files: ['**/*.vue'],
     languageOptions: {
       parser: parserVue,
-      globals: {
-        defineProps: 'readonly',
-        defineEmits: 'readonly',
-        defineExpose: 'readonly',
-        withDefaults: 'readonly'
-      },
       parserOptions: {
-        parser: parserBabel,
         ecmaVersion: 2022,
         sourceType: 'module',
         jsxPragma: 'React',
@@ -260,4 +362,4 @@ export default defineFlatConfig([
       }]
     }
   }
-]);
+])
