@@ -188,7 +188,9 @@ export function downloadFile (boldData, filename = 'test-filename', type) {
   // TODO: https://blog.csdn.net/weixin_42142057/article/details/97655591
   const blob = boldData instanceof Blob
     ? boldData
-    : new Blob([boldData], { type })
+    : new Blob([boldData], {
+      type
+    })
   const url = window.URL.createObjectURL(blob)
 
   const link = document.createElement('a')

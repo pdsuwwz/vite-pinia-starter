@@ -15,7 +15,7 @@ export function createRouterGuards (router) {
     const userAccountStore = useUserAccountStore()
     NProgress.start()
 
-    document.title = `${to.meta.title || ''} - ${systemTitle}`
+    document.title = `${ to.meta.title || '' } - ${ systemTitle }`
 
     console.log('😄😄😄 ', to)
 
@@ -59,7 +59,7 @@ export function createRouterGuards (router) {
     userAccountStore.setLanguage({
       locale: currentRouteLocale || userAccountStore.locale
     })
-    next(`/${currentRouteLocale || userAccountStore.locale}/user/login`)
+    next(`/${ currentRouteLocale || userAccountStore.locale }/user/login`)
   })
 
   router.afterEach((to) => {

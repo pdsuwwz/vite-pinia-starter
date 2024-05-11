@@ -64,6 +64,8 @@
     "@babel/eslint-parser": "^7.24.1",
     "@babel/preset-env": "^7.24.4",
     "@eslint/js": "^9.0.0",
+    "@stylistic/eslint-plugin": "^2.1.0",
+    "@stylistic/stylelint-plugin": "^2.1.2",
     "@sucrase/jest-plugin": "^3.0.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/compiler-sfc": "^3.4.21",

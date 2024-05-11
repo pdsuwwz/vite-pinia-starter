@@ -31,7 +31,7 @@
         </template>
       </UserAccountContainerLayout>
     </div>
-    <Footer />
+    <CustomFooter />
   </div>
 </template>
 
@@ -169,7 +169,7 @@ export default defineComponent({
         Cookie.set('token', data.user.token)
         Cookie.set('name', data.user.username)
         router
-          .replace(`/${route.params.locale || ''}`)
+          .replace(`/${ route.params.locale || '' }`)
           .then(() => {
             ElMessage.success({
               type: 'success',

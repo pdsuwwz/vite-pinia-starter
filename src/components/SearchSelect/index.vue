@@ -145,7 +145,7 @@ export default defineComponent({
           .replace(
             new RegExp(query, 'gi'),
             (match) => {
-              return `<span class="search-select-highlight">${match}</span>`
+              return `<span class="search-select-highlight">${ match }</span>`
             }
           )
       })
