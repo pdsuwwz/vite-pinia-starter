@@ -16,7 +16,8 @@
     "test:coverage": "jest --coverage"
   },
   "engines": {
-    "node": ">= 16.15.0"
+    "node": ">= 16.15.0",
+    "pnpm": ">= 8.14.x"
   },
   "keywords": [
     "vue",
