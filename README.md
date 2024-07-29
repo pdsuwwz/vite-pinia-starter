@@ -1,6 +1,6 @@
 # vite-pinia-starter
 
-[![Deploy](https://github.com/pdsuwwz/vite-pinia-starter/workflows/Deploy%20for%20gh%20pages/badge.svg)](https://github.com/pdsuwwz/vite-pinia-starter/actions/workflows/deploy.yml)
+[![Deploy](https://github.com/pdsuwwz/vite-pinia-starter/workflows/gh-pages/badge.svg)](https://github.com/pdsuwwz/vite-pinia-starter/actions/workflows/deploy.yml)
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/pdsuwwz/vite-pinia-starter/deploy.yml?branch=main)](https://github.com/pdsuwwz/vite-pinia-starter/deployments/activity_log?environment=github-pages)
 [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest)
 [![Author](https://img.shields.io/badge/Author-Wisdom-9cf)](https://github.com/pdsuwwz)
