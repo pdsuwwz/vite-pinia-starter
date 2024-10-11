@@ -1,1 +1,0 @@
-import{_ as o,b as t,d as n,o as s}from"./index-DHFTcNqj.js";const r={name:"NotFound"};function a(c,e,d,l,p,_){return s(),t("div",null,e[0]||(e[0]=[n("h1",null,"NOT-FOUND 404",-1)]))}const f=o(r,[["render",a]]);export{f as default};
