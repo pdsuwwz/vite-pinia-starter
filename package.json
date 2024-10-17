@@ -87,7 +87,7 @@
     "jest-environment-jsdom": "29.7.0",
     "jest-transform-stub": "^2.0.0",
     "rollup": "^4.19.0",
-    "sass": "1.77.6",
+    "sass": "1.80.2",
     "sucrase": "^3.35.0",
     "vite": "^5.3.4"
   }
