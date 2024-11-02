@@ -1,1 +1,0 @@
-import{_ as e,e as o,o as n,b as t}from"./index-DIzkCqmS.js";const s=o({name:"Xx"}),a={class:"xxx-container"};function c(r,_,d,p,i,f){return n(),t("div",a)}const m=e(s,[["render",c],["__scopeId","data-v-584b6f6d"]]);export{m as default};
