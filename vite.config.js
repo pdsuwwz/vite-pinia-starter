@@ -60,6 +60,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
+        api: 'modern',
         additionalData: `@use '@/styles/element-variables.scss' as *;`
       }
     }
