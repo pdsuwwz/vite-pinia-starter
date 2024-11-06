@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 import vue from '@vitejs/plugin-vue'
 
 import path from 'path'
@@ -63,5 +63,16 @@ export default defineConfig({
         additionalData: `@use '@/styles/element-variables.scss' as *;`
       }
     }
+  },
+  test: {
+    globals: true,
+    dir: '__tests__',
+    environment: 'jsdom',
+    alias: [
+      {
+        find: '@',
+        replacement: path.resolve(__dirname, 'src')
+      }
+    ]
   }
 })
